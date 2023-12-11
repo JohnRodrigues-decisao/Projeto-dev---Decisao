@@ -1,0 +1,47 @@
+<div class="login">
+      <div class="container">
+            <form *ngIf="!loading">
+                  <a class="logo-login" href="#"><img src="../../../assets/img/D.webp" alt=""></a>
+
+                  <h2>Seja bem vindo!</h2>
+
+                  <p>Insira seus dados e acesse a plataforma</p>
+
+                  <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">E-mail
+                              <span class="asterisco"><img src="../../../assets/icons/asterisco.webp" alt="">
+                              </span>
+                        </label>
+
+                        <input [(ngModel)]="userEmail" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira seu e-mail">
+
+                  </div>
+                  <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Senha
+                              <span class="asterisco"><img src="../../../assets/icons/asterisco.webp" alt="">
+                              </span>
+                        </label>
+
+                        <input [(ngModel)]="userPassword" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira sua senha">
+                  </div>
+                  <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+                  </div>
+
+                  <button (click)="login()" type="submit" class="btn btn-primary">Entrar</button>
+
+                  <div class="obg-camp">
+                    <span class="asterisco"><img src="../../../assets/icons/asterisco.webp" alt="">
+                    </span>
+                    <p>Campos obrigatórios</p>
+                  </div>
+
+                  <div class="alter-resister">
+                    <p>Não possui cadastro?</p>
+                    <a routerLink="/register"> Faça seu cadastro aqui!</a>
+                  </div>
+            </form>
+            <app-spinner *ngIf="loading"></app-spinner>
+      </div>
+</div>

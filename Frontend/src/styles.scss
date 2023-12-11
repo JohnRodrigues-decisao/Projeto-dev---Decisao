@@ -1,0 +1,42 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+/* Global styles */
+
+@font-face {
+  font-family: 'Inter-400';
+  src: url('./assets/fonts/Inter-400.woff2');
+}
+
+@font-face {
+  font-family: 'Inter-600';
+  src: url('./assets/fonts/Inter-600.woff2');
+}
+@font-face {
+  font-family: 'Inter-700';
+  src: url('./assets/fonts/Inter-700.woff2');
+}
+@font-face {
+  font-family: 'Inter-900';
+  src: url('./assets/fonts/Inter-900.woff2');
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--grayscale-600, #212529)!important;
+  color: #FFFFFF!important;
+  font-family: 'Inter-400', sans-serif!important;
+}
+
+
+.none{
+  display: none!important;
+}
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

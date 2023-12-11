@@ -1,0 +1,386 @@
+<div class="dashboard">
+
+  <app-sidebar></app-sidebar>
+
+  <div class="dash-home">
+    <app-header></app-header>
+
+    <div class="dash-add">
+
+      <!-- Edição dos clientes -->
+      <div class="dash-container">
+        <div class="breadcrumb">
+          <h1>Clientes</h1>
+          <span>/</span>
+          <h2>Editar cliente</h2>
+        </div>
+
+        <form>
+          <div class="form-head">
+            <h3>Localização</h3>
+
+            <div class="line"></div>
+
+            <div class="obg-camp">
+              <div>
+                <img src="../../../../assets/icons/asterisco.svg" alt="">
+              </div>
+              <p>Campos obrigatórios</p>
+            </div>
+          </div>
+
+
+          <div class="form-container">
+            <!-- CPF/CNPJ -->
+            <div class="form-camp mb-3 mt-4">
+
+              <!-- Endereços -->
+              <div class="accordion">
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openEndereco"
+                      aria-expanded="false" aria-controls="collapseOne">
+                      Endereços
+                      <div class="line"></div>
+                    </button>
+                  </h2>
+
+                  <a class="collapseOneLink">+ Adicionar endereço</a>
+
+                  <div id="openEndereco" class="accordion-collapse collapse" data-bs-parent="">
+
+
+                    <div class="card">
+
+                      <div class="card-body">
+                        <p class="card-text">
+                          Rua L9, Qd53, Lt24, Casa Prata, Centro
+                          Goiânia - GO
+                          CEP: 74950-100
+                        </p>
+                      </div>
+
+                      <div class="card-icons">
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                      </div>
+
+                    </div>
+
+                    <div class="card">
+
+                      <div class="card-body">
+                        <p class="card-text">
+                          Rua L9, Qd53, Lt24, Casa Prata, Centro
+                          Goiânia - GO
+                          CEP: 74950-100
+                        </p>
+                      </div>
+
+                      <div class="card-icons">
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                      </div>
+
+                    </div>
+
+                    <div class="card">
+
+                      <div class="card-body">
+                        <p class="card-text">
+                          Rua L9, Qd53, Lt24, Casa Prata, Centro
+                          Goiânia - GO
+                          CEP: 74950-100
+                        </p>
+                      </div>
+
+                      <div class="card-icons">
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                      </div>
+
+                    </div>
+
+                    <div class="card">
+
+                      <div class="card-body">
+                        <p class="card-text">
+                          Rua L9, Qd53, Lt24, Casa Prata, Centro
+                          Goiânia - GO
+                          CEP: 74950-100
+                        </p>
+                      </div>
+
+                      <div class="card-icons">
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                      </div>
+
+                    </div>
+
+                    <div class="card">
+
+                      <div class="card-body">
+                        <p class="card-text">
+                          Rua L9, Qd53, Lt24, Casa Prata, Centro
+                          Goiânia - GO
+                          CEP: 74950-100
+                        </p>
+                      </div>
+
+                      <div class="card-icons">
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                      </div>
+
+                    </div>
+
+                    <div class="card">
+
+                      <div class="card-body">
+                        <p class="card-text">
+                          Rua L9, Qd53, Lt24, Casa Prata, Centro
+                          Goiânia - GO
+                          CEP: 74950-100
+                        </p>
+                      </div>
+
+                      <div class="card-icons">
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                        <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Telefone -->
+              <div class="accordion">
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openTell"
+                      aria-expanded="false" aria-controls="collapseOne">
+                      Telefones
+                      <div class="line"></div>
+                    </button>
+                  </h2>
+
+                  <a (click)="alterClassTell()" class="collapseOneLink">+ Adicionar telefone</a>
+
+                  <!-- show -->
+                  <div id="openTell" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+
+                    <!-- Modal para cadastramento de um novo telefone -->
+                    <div [ngClass]="{'none': newClassTell}"  class="colapse-tell none">
+                      <div class="colapse-tell-opt">
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                          placeholder="(xx) x xxxx xxxx">
+                        <button (click)="alterClassTell()" type="button" class="btn btn-canc">Cancelar</button>
+                        <button type="button" class="btn btn-safe ">Salvar cliente</button>
+                      </div>
+
+                      <div class="collapse-check mb-3 mt-4">
+                        <input type="checkbox" class="form-check-input" id="telefonePrincipal">
+                        <label class="form-check-label" for="telefonePrincipal">Telefone principal</label>
+                      </div>
+                    </div>
+
+                    <!-- Tel cadastrado 1 -->
+                    <div class="tell-columns text-center">
+                      <div class="row align-items-start">
+                        <div class="col">
+                          (62) 9 9139-5633
+                        </div>
+                        <div class="col">
+                          <div class="col-princ">Principal</div>
+                        </div>
+
+                        <div class="col tell-icons">
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Tel cadastrado 2 -->
+                    <div class="tell-columns text-center">
+                      <div class="row align-items-start">
+                        <div class="col">
+                          (62) 9 9139-5633
+                        </div>
+
+                        <div class="col">
+                          <!-- <div class="col-princ">Principal</div> -->
+                        </div>
+
+                        <div class="col tell-icons">
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Tel cadastrado 3 -->
+                    <div class="tell-columns text-center">
+                      <div class="row align-items-start">
+                        <div class="col">
+                          (62) 9 9139-5633
+                        </div>
+
+                        <div class="col">
+                          <!-- <div class="col-princ">Principal</div> -->
+                        </div>
+
+                        <div class="col tell-icons">
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!-- Email -->
+              <div class="accordion">
+                <div class="accordion-item">
+
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openEmail"
+                      aria-expanded="false" aria-controls="collapseOne">
+                      <h3>E-mail</h3>
+                      <div class="line"></div>
+                    </button>
+                  </h2>
+
+                  <a (click)="alterClass()" class="collapseOneLink">+ Adicionar e-mail</a>
+
+                  <!-- show -->
+                  <div id="openEmail" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+
+                    <!-- Modal para cadastramento de um novo email -->
+                    <div [ngClass]="{'none': newClass}" class="colapse-email none">
+                      <div class="colapse-email-opt">
+                        <input
+                          class="form-control"
+                          placeholder="(xx) x xxxx xxxx"
+                          type="text"
+                          >
+
+                        <button (click)="alterClass()"  type="button" class="btn btn-canc">Cancelar</button>
+                        <button type="button" class="btn btn-safe ">Salvar cliente</button>
+                      </div>
+
+                      <div class="collapse-check mb-3 mt-4">
+                        <input type="checkbox" class="form-check-input" id="telefonePrincipal">
+                        <label class="form-check-label" for="telefonePrincipal">Telefone principal</label>
+                      </div>
+                    </div>
+
+                    <!-- Tel cadastrado 1 -->
+                    <div class="tell-columns text-center">
+                      <div class="row align-items-start">
+                        <p class="col">
+                          testedecisaosistemas.com.br
+                        </p>
+                        <div class="col">
+                          <div class="col-princ">Principal</div>
+                        </div>
+
+                        <div class="col tell-icons">
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Tel cadastrado 2 -->
+                    <div class="tell-columns text-center">
+                      <div class="row align-items-start">
+                        <div class="col">
+                          testedecisaosistemas.com.br
+                        </div>
+
+                        <div class="col">
+                          <!-- <div class="col-princ">Principal</div> -->
+                        </div>
+
+                        <div class="col tell-icons">
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- Tel cadastrado 3 -->
+                    <div class="tell-columns text-center">
+                      <div class="row align-items-start">
+                        <div class="col">
+                          testedecisaosistemas.com.br
+                        </div>
+
+                        <div class="col">
+                          <!-- <div class="col-princ">Principal</div> -->
+                        </div>
+
+                        <div class="col tell-icons">
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/edit.svg" alt=""></a>
+                          <a href="#" class="card-link"><img src="../../../../assets/icons/delete.svg" alt=""></a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+          <div class="form-btn mb-3 mt-4">
+            <button routerLink="/dashboard/client" type="button" class="btn btn-canc">Cancelar</button>
+            <button type="button" class="btn btn-safe disabled">Salvar cliente</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="aside">
+        <div class="aside-item ">
+          <a routerLink="/dashboard/client/add">Dados cadastrais</a>
+        </div>
+        <div class="aside-item active">
+          <a routerLink="/dashboard/client/local">Localização</a>
+        </div>
+        <div class="aside-item">
+          <a routerLink="/dashboard/client/repres">Representantes</a>
+        </div>
+      </div>
+
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+
+</div>

@@ -1,0 +1,136 @@
+<div class="dashboard">
+
+  <app-sidebar></app-sidebar>
+
+  <div class="dash-home">
+    <app-header></app-header>
+
+    <div class="dash-add">
+
+      <!-- Edição dos clientes -->
+      <div class="dash-container">
+        <div class="breadcrumb">
+            <h1>Clientes</h1>
+            <span>/</span>
+            <h2>Adicionar cliente</h2>
+        </div>
+
+        <form>
+          <div class="form-head">
+              <h3>Dados cadastrais</h3>
+
+              <div class="line"></div>
+
+              <div class="obg-camp">
+                <div>
+                  <img src="../../../../assets/icons/asterisco.svg" alt="">
+                </div>
+                <p>Campos obrigatórios</p>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Situação: Ativo
+                  <!-- Situação: Inativo -->
+                  <!-- Situação: Negativado -->
+                </button>
+                <ul class="dropdown-menu dropdown-opt">
+                  <li><a class="dropdown-item" href="#">Inativo</a></li>
+                  <li><a class="dropdown-item" href="#">Negativado</a></li>
+                </ul>
+              </div>
+          </div>
+
+
+          <div class="form-container">
+            <!-- CPF/CNPJ -->
+            <div class="form-camp mb-3 mt-4">
+              <label for="exampleInputName" class="form-label">
+                CNPJ/CPF
+                <img src="../../../../assets/icons/asterisco.svg" alt="">
+              </label>
+
+              <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                placeholder="Insira seu CNPJ/CPF">
+            </div>
+
+            <!-- Nome -->
+            <div class="form-name">
+              <!-- Nome -->
+              <div class="form-camp form-camp-one">
+                <label for="exampleInputName" class="form-label">
+                  Nome
+                  <img src="../../../../assets/icons/asterisco.svg" alt="">
+                </label>
+
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                  placeholder="Insira seu Nome">
+              </div>
+
+              <!-- Nome -->
+              <div class="form-camp form-camp-one none">
+                <label for="exampleInputName" class="form-label">
+                  Nome fantasia
+                  <img src="../../../../assets/icons/asterisco.svg" alt="">
+                </label>
+
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                  placeholder="Insira o nome fantasia do CNPJ">
+              </div>
+
+            </div>
+
+            <!-- Inscrição cnpj -->
+            <div class="form-name none">
+              <!-- Nome -->
+              <div class="form-camp form-camp-one">
+                <label for="exampleInputName" class="form-label">
+                  Inscrição Municipal
+                  <img src="../../../../assets/icons/asterisco.svg" alt="">
+                </label>
+
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                  placeholder="Insira a Inscrição Municipal">
+              </div>
+
+              <!-- Nome -->
+              <div class="form-camp form-camp-one">
+                <label for="exampleInputName" class="form-label">
+                  Inscrição Estadual
+                  <img src="../../../../assets/icons/asterisco.svg" alt="">
+                </label>
+
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                  placeholder="Insira a Inscrição Estadual">
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="form-btn mb-3 mt-4">
+            <button routerLink="/dashboard/client" type="button" class="btn btn-canc">Cancelar</button>
+            <button type="button" class="btn btn-safe">Salvar cliente</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="aside">
+        <div class="aside-item active">
+          <a routerLink="dashboard/client/add">Dados cadastrais</a>
+        </div>
+        <div class="aside-item">
+          <a routerLink="/dashboard/client/local">Localização</a>
+        </div>
+        <div class="aside-item">
+          <a routerLink="/dashboard/client/repres">Representantes</a>
+        </div>
+      </div>
+
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+
+</div>
